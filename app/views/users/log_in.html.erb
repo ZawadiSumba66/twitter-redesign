@@ -1,0 +1,15 @@
+<div class="section">
+<div class="container">
+
+<h1>Sign In</h1>
+
+ <%= form_tag('/users/sign_in', method: "put") do %>
+      <%= label_tag(:username, "Name:")%>
+      <br/>
+      <%= text_field_tag(:username) %>
+      <br>
+      <br>
+      <%= submit_tag("Submit")%>
+    <% end %>
+</div>
+</div>
