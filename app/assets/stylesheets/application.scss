@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap";
+
+  body {
+   overflow: hidden;
+  }
+
+  .left {
+      background-color: #213346;
+      height: 600vh;
+  }
+
+  .top_nav {
+      background-color: #50A1E0;
+      height: 10vh;
+  }

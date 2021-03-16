@@ -4,9 +4,9 @@
 <h1>Sign Up</h1>
 
 <%= form_with model: @user do |form| %>
-    <%= form.label :username, "Name:" %>
-    <br/>
-    <%= form.text_field :username, placeholder: "Enter your Name"%>
+    <%= form.text_field :username, placeholder: "Enter your Username"%>
+    <br>
+     <%= form.text_field :fullname, placeholder: "Enter your Fullname"%>
     <br />
     <br/>
     <%= form.submit "Submit", class: "button-dark"%>
