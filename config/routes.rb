@@ -6,7 +6,15 @@ Rails.application.routes.draw do
   put 'users/sign_in', to: 'users#sign_in'
   put 'users/sign_up', to: 'users#sign_up'
   delete 'users/log_out', to: 'users#log_out'
+  post "followings/new", to: 'followings#new'
   
-  resources :users
   resources :tweets
+  resources :users 
+
+  resources :users, only: %i[show,index] do
+    resources :followings, only: %i[create,destroy,new]
+  end
+
+  resources :followings
+  
 end

@@ -7,16 +7,41 @@
 	  <strong class="text-gray pr-5"><%= link_to 'Log out',users_log_out_path, method: :delete %></strong>
 	</p>
 </div>
-<div class="row">
+<div class="row text-dark">
 	<div class="col-8">
       <div class="top_image">
-      <%= image_tag("photo_profile.jpg", :alt => "profile_image", class: "w-100") %>
-	</div>
-	<div class="personal tweets text-dark">
+      <%=  image_tag("photo_profile.jpg", :alt => "profile_image", class: "w-100") %>
+	  </div>
+	<div class="personal_tweets">
 	 <%@personal_tweets.each do |personal|%>
 	   <p><%= personal.text%></p>
 	 <%end%>
 	</div>
     </div>
+	<div class="col-4 text-center">
+	    	<p class="panel-heading">Profile</p>
+			            <%= avatar_for(@user, classes: nil)%>
+						<p class="names">
+							<strong><%= @user.username %></strong><br />
+							<small><%= @user.fullname %></small>
+						</p>
+                <div class="followings ">
+				<div class="level-item d-flex justify-content-center">
+				    <div class="px-3">
+						<p class="heading">Tweets</p>
+						 <p class="tweets"><%=@user.authored_tweets.count%></p>
+					</div>
+					<div class="px-3">
+						<p class="heading">Following</p>
+						<p class="title is-6">123</p>
+					</div>
+					<div class="level-item">
+					<div>
+						<p class="heading">Followers</p>
+						<p class="title is-6">465K</p>
+					</div>
+				</div>
+                </div>
+	</div>
 </div>
 </div>

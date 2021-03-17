@@ -7,10 +7,13 @@
         <div class="media-content">
             <div class="content">
             <%@users.each do |user|%>
+            <% unless current_user==user%>
                <p>
-                 <strong><%= user.username %></strong>
+                 <strong><%=link_to user.username, user_path(user)%></strong>
                  <small><%= user.fullname %></small>
+                 <%= follow(@user) %>
                </p>
+              <%end%>
               <%end%>
             </div>
         </div>
