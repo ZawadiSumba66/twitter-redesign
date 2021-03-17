@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
     def index
         @tweets = Tweet.all.order("created_at DESC")
+        @users = User.all
         @tweet = Tweet.new
     end
     def new

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users=User.all
+    @users = User.all
   end
   def new
     @user = User.new
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @tweets = User.find(session[:id]).authored_tweets.order("created_at DESC")
+    @personal_tweets = @user.authored_tweets.order("created_at DESC")
   end
 
   def sign_in

@@ -3,17 +3,19 @@
 <div class="text-light col-10">
 <div class="top_nav ml-0">
    <p class="names d-flex justify-content-end pt-4">
-	  <strong class="text-gray pr-3"><%= link_to current_user.username, current_user %></strong><br />
+	  <strong class="text-gray pr-3"><%= link_to 'Homepage', root_path %></strong><br />
 	  <strong class="text-gray pr-5"><%= link_to 'Log out',users_log_out_path, method: :delete %></strong>
 	</p>
 </div>
 <div class="row">
 	<div class="col-8">
       <div class="top_image">
-      <%= image_tag("photo_profile.jpg", :alt => "profile_image", class: "w-100 h-75") %>
+      <%= image_tag("photo_profile.jpg", :alt => "profile_image", class: "w-100") %>
 	</div>
-    <div class="personal_feed">
-	   <%= render @tweets%>
+	<div class="personal tweets text-dark">
+	 <%@personal_tweets.each do |personal|%>
+	   <p><%= personal.text%></p>
+	 <%end%>
 	</div>
     </div>
 </div>
