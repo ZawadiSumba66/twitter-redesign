@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def index
+    @users=User.all
+  end
   def new
     @user = User.new
   end
@@ -9,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:id] = @user.id
       session[:username] = @user.username
-      redirect_to @user, notice: 'You have successfully signed up'
+      redirect_to root_path, notice: 'You have successfully signed up'
     else
       render :new, alert: 'username has alraedy been taken'
     end
@@ -17,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @tweets = User.find(session[:id]).authored_tweets.order("created_at DESC")
   end
 
   def sign_in
@@ -25,7 +29,7 @@ class UsersController < ApplicationController
     if @user
       session[:id] = @user.id
       session[:username] = @user.username
-      redirect_to @user, notice: 'You have successfully signed in'
+      redirect_to root_path, notice: 'You have successfully signed in'
     else
       render :log_in, alert: 'User does not exist'
     end
@@ -38,7 +42,7 @@ class UsersController < ApplicationController
     session.delete(:id)
     session.delete(:username)
     session.delete(:fullname)
-    redirect_to root_path, notice: 'You have successfully logged out'
+    redirect_to users_sign_in_path, notice: 'You have successfully logged out'
   end
 
   private

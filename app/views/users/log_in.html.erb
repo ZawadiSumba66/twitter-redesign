@@ -1,15 +1,15 @@
-<div class="section">
-<div class="container">
+<div class=" mx-auto w-50 pt-5 mt-5 col-12">
+<div class="logo text-primary">
+  <p class="d-flex justify-content-center">Africa Digest Zone</p>
+ </div>
+<h1 class="text-primary">Sign In</h1>
 
-<h1>Sign In</h1>
-
- <%= form_tag('/users/sign_in', method: "put") do %>
-      <%= label_tag(:username, "Name:")%>
-      <br/>
-      <%= text_field_tag(:username) %>
+ <%= form_with model: @user, method: "put" do |form|%>
+      <%= form.text_field :username, class: 'form-control', placeholder: "Enter your username"%>
       <br>
       <br>
-      <%= submit_tag("Submit")%>
+      <%= form.submit "Submit", class: " btn btn-primary"%>
     <% end %>
-</div>
+    <p>Don't have an account? </p>
+<%= link_to 'Sign up',new_user_path %>
 </div>

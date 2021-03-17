@@ -1,0 +1,13 @@
+<article class="content">
+<div class="tweet_header text-dark d-flex">
+   <p class="px-3">Tweets</p>
+   <p>Profile</p>
+</div>
+<div class="panel">
+<%= simple_form_for(@tweet) do |f| %>
+    <%= f.input :text, label: "Tweeet about it", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "What's on new...", autofocus: true %>
+    <br>
+    <%= f.button :submit, class: "button btn-primary d-flex justify-content-end" %>
+<% end %>
+</div>
+</article>

@@ -1,6 +1,6 @@
-<div class="top_nav text-light">
-   <p class="names">
-	  <strong><%= current_user.username %></strong><br />
-	  <small><%= link_to 'Log out' %></small>
+<div class="top_nav ml-0">
+   <p class="names d-flex justify-content-end pt-4">
+	  <strong class="text-gray pr-3"><%= link_to current_user.username, current_user %></strong><br />
+	  <strong class="text-gray pr-5"><%= link_to 'Log out',users_log_out_path, method: :delete %></strong>
 	</p>
 </div>

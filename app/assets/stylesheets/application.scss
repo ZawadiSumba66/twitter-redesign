@@ -15,10 +15,6 @@
  */
   @import "bootstrap";
 
-  body {
-   overflow: hidden;
-  }
-
   .left {
       background-color: #213346;
       height: 600vh;
@@ -28,3 +24,13 @@
       background-color: #50A1E0;
       height: 10vh;
   }
+
+  .logo {
+    font-family: 'Redressed', cursive;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  // img {
+  //   width: 100%;
+  // }
