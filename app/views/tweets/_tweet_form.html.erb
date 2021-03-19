@@ -1,13 +1,10 @@
-<article class="content">
+<div class="fill_form mt-4">
 <div class="tweet_header text-dark d-flex">
-   <p class="px-3">Tweets</p>
-   <p>Profile</p>
+   <%=link_to 'Tweets', root_path, class: "text-dark pr-3 pb-3 text-decoration-none border-bottom-2" %>
 </div>
-<div class="panel">
-<%= simple_form_for(@tweet) do |f| %>
-    <%= f.input :text, label: "Tweeet about it", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "What's on new...", autofocus: true %>
+<%= form_with model: @tweet do |f| %>
+    <%= f.text_area :text, class: "form-control h-50 border-rounded", placeholder: "Let's Tweet Africa"%>
     <br>
-    <%= f.button :submit, class: "button btn-primary d-flex justify-content-end" %>
+    <%= f.button :Tweet,  class: "btn btn-primary d-flex justify-content-end" %>
 <% end %>
 </div>
-</article>

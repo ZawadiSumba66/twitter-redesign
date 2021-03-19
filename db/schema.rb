@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_143327) do
+ActiveRecord::Schema.define(version: 2021_03_18_082103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "followings", force: :cascade do |t|
-    t.bigint "followedid"
-    t.bigint "followerid_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["followedid"], name: "index_followings_on_followedid"
-    t.index ["followerid_id"], name: "index_followings_on_followerid_id"
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.index ["followed_id"], name: "index_followings_on_followed_id"
+    t.index ["follower_id"], name: "index_followings_on_follower_id"
   end
 
   create_table "tweets", force: :cascade do |t|

@@ -1,24 +1,16 @@
-<li>
-<div class="column">
-    <nav class="panel">
-       <p class="panel-heading">Who to follow</p>
-    <div class="panel-block">
-       <article class="media">
-        <div class="media-content">
-            <div class="content">
+      <p class=".font-weight-bold text-primary">Who to follow</p>
             <%@users.each do |user|%>
             <% unless current_user==user%>
-               <p>
+               <div class="d-flex justify-content-center">
+               <div class="col-6">
                  <strong><%=link_to user.username, user_path(user)%></strong>
+                  <br>
                  <small><%= user.fullname %></small>
-                 <%= follow(@user) %>
-               </p>
+                 </div>
+                 <div class="col-6">
+                 <%= follow_button(user) %>
+                 </div>
+               </div>
+               <br>
               <%end%>
               <%end%>
-            </div>
-        </div>
-    </article>
-    </div>
-    </nav>
-    </div>
-    </li>

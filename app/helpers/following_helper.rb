@@ -1,16 +1,17 @@
 module FollowingHelper
-    def follow(user)
-      return if current_user == user
-  
-      if current_user.following?(user)
-        form_with url: following_path(user), method: :delete, class: 'relative', data: { remote: true } do |form|
-          form.submit 'Unfollow'
+    def follow_button(user)
+      return if current_user==user
+      if  !current_user.followings.exists?(user.id)
+        form_with url: user_followings_path(user), method: :post do |form|
+          form.submit 'Follow', class: " px-4 py-1 bg-primary text-light rounded-pill text-red-500 border
+          border-red-500 rounded-full "
         end
       else
-        form_with url: new_following_path(user), method: :post do |form|
-          form.submit 'Follow'
-        end
+        form_with url: following_path(user), method: :delete do |form|
+          form.submit 'Unfollow',class: " px-4 py-1 bg-danger text-light rounded-pill text-red-500 border
+          border-red-500 rounded-full "
+        end  
       end
     end
-  end
+end
   

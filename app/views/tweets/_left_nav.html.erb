@@ -1,21 +1,6 @@
-<div class="left text-secondary col-2 pl-4 ">
-		<p class="panel-heading">Profile</p>
-						<p class="names">
-							<strong><%= current_user.username %></strong><br />
-							<small><%= current_user.fullname %></small>
-						</p>
-                <div class="followings d-flex">
-				<div class="level-item">
-					<div>
-						<p class="heading">Following</p>
-						<p class="title is-6">123</p>
-					</div>
-				</div>
-					<div class="level-item">
-					<div>
-						<p class="heading">Followers</p>
-						<p class="title is-6">465K</p>
-					</div>
-				</div>
-                </div>
+<div class="left text-secondary text-center px-2 pt-3">
+		 <p class="text-light text-sm logo">Africa Digest Zone</p>
+		  <strong class="text-gray pr-3"><%= link_to 'Homepage', root_path, class: "text-light"%></strong><br />
+		  <br>
+	      <strong class="text-gray pr-3"><%= link_to 'Profile', current_user, class: "text-light"%></strong><br />
 </div>

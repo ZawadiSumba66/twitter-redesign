@@ -15,9 +15,15 @@
  */
   @import "bootstrap";
 
+  // body {
+  //   overflow-x: hidden;
+  // }
+
   .left {
       background-color: #213346;
-      height: 600vh;
+      height: 100vh;
+      position: fixed;
+      z-index: 1;
   }
 
   .top_nav {
@@ -32,5 +38,14 @@
   }
 
   img {
+    height: 30vh;
+  }
+
+  .welcome img {
     height: 50vh;
+  }
+
+
+  .tweet_header a:hover{
+     color: #50A1E0;
   }
