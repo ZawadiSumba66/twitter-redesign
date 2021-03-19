@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
+
   def new
     @user = User.new
   end
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @personal_tweets = @user.authored_tweets.order("created_at DESC")
+    @personal_tweets = @user.authored_tweets.order('created_at DESC')
   end
 
   def sign_in
@@ -48,6 +49,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username,:fullname)
+    params.require(:user).permit(:username, :fullname)
   end
 end
