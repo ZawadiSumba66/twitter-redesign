@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature 'Post' do
+RSpec.feature 'Tweet' do
   before(:each) do
-    user = User.create(fullname: 'chris otieno', username: 'chris5')
-    tweet = Tweet.create(text: 'this is Africa', author_id: user.id)
+    @user = User.create(fullname: 'chris otieno', username: 'chris5')
+    @tweet = Tweet.create(text: 'this is Africa', author_id: user.id)
   end
   scenario 'when a user signs in and posts a tweet' do
     visit '/users/sign_in'
