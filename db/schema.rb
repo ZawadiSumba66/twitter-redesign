@@ -15,29 +15,4 @@ ActiveRecord::Schema.define(version: 2021_03_18_082103) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "followings", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "follower_id"
-    t.integer "followed_id"
-    t.index ["followed_id"], name: "index_followings_on_followed_id"
-    t.index ["follower_id"], name: "index_followings_on_follower_id"
-  end
-
-  create_table "tweets", force: :cascade do |t|
-    t.text "text"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "author_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "fullname"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "cover_image"
-    t.string "photo"
-  end
-
 end
