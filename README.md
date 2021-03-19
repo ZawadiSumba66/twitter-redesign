@@ -66,7 +66,7 @@ The number of tweets one makes is also displayed in the user profile.
 
 - GitHub: [@ZawadiSumba66](https://github.com/ZawadiSumba66)
 - Twitter: [@zawadirose1](https://twitter.com/zawadirose1)
-- LinkedIn: [rose-sumba](https://www.linkedin.com/in/rose-sumba-9b36401b5/)
+- LinkedIn: [rose-sumba](https://www.linkedin.com/in/rosesumba/)
 
 
 
