@@ -88,7 +88,7 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-&copy; 2021 Amit and Rose
+&copy; 2021 Rose
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
