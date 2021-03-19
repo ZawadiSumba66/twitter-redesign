@@ -1,12 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # TWITTER REDESIGN
-
 A twitter clone for creating tweets and displaying other users for following. The current user can also be followed by other users and his/her profile showing the names of users following them.
 The number of tweets one makes is also displayed in the user profile.
 
 ## Screenshot
-![Rails Capstone](app\assets\images\screenshot.png)
+![Rails Capstone](app/assets/images/screenshot.png)
 
 ## Built With
 
@@ -56,14 +55,11 @@ The number of tweets one makes is also displayed in the user profile.
 
 - A user can follow other users and and can also be folowed back
 
-
 ### Run tests
 
 ```
   rpsec --format documentation
 ```
-
-
 ## Author
 
 👤 **Rose Sumba**
