@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
     end
     def new
         @tweet = User.find(session[:id]).tweets.build
-      end
+    end
     
       def show
         @tweet = Tweet.find(params[:id])
