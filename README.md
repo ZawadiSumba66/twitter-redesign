@@ -24,12 +24,12 @@ The number of tweets one makes is also displayed in the user profile.
 
 ### Prerequisites
 
-  Text Editor (VSCode is suggested.)
-  Ruby
-  Rails
-  Bundler
-  Yarn
-  SQL
+ - Text Editor (VSCode is suggested.)
+ - Ruby
+ - Rails
+ - Bundler
+ - Yarn
+ - SQL
 
 ## Getting started
 
