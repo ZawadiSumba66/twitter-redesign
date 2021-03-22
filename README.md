@@ -5,7 +5,7 @@ A twitter clone for creating tweets and displaying other users for following. Th
 The number of tweets one makes is also displayed in the user profile.
 
 ## Screenshot
-![Rails Capstone](./app/assets/images/Screenshot.png)
+![Rails Capstone](./app/assets/images/screenshot.png)
 
 ## Built With
 
