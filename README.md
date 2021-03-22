@@ -20,7 +20,7 @@ The number of tweets one makes is also displayed in the user profile.
 
 ## Live Demo
 
-[Live Demo Link](https://stormy-atoll-29679.herokuapp.com/)
+[Live Demo Link](https://serene-dawn-02922.herokuapp.com/)
 
 ### Prerequisites
 
