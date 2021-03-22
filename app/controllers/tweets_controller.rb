@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.all.order('created_at DESC')
-    @users = User.all.order('created_at DESC')
+    @tweets = Tweet.all.ordered_by_most_recent
+    @users = User.all.ordered_by_most_recent
     @tweet = Tweet.new
   end
 
@@ -21,6 +21,6 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:text, :author_id)
+    params.require(:tweet).permit(:text)
   end
 end

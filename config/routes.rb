@@ -14,7 +14,10 @@ Rails.application.routes.draw do
     resources :followings, only: %i[create]
   end
 
-
   resources :followings, only: %i[destroy]
+
+  resources :tweets, only: [:index, :create] do
+    resources :likes, only: [:create, :destroy]
+  end
   
 end

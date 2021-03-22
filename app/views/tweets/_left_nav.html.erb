@@ -1,5 +1,5 @@
-<div class="left text-secondary text-center px-2 pt-3">
-      <div class="d-flex">
+<div class="left text-secondary  px-2 pt-3">
+      <div class="d-flex text-center">
        <div class="profile-users">
           <%= avatar_for(current_user)%>
 		</div>
@@ -8,11 +8,11 @@
 		</div>
 		</div>
 		<div class="d-flex pt-4">
-		 <div class="px-3">
+		 <div class="px-3 text-center">
 		                <p class="tweets text-light font-weight-bold"><%=current_user.followers.count%></p>
                         <p class="heading">Followers</p>
                     </div>
-                    <div class="px-3">
+                    <div class="px-3 text-center">
 					  <p class="title is-6 text-light font-weight-bold"><%=current_user.followings.count%></p>
                         <p class="heading">Followings</p>
                     </div>

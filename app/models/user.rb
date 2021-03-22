@@ -2,6 +2,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
   validates :fullname, presence: true
 
+  has_many :likes
+
   has_many :authored_tweets, foreign_key: 'author_id', class_name: 'Tweet'
 
   has_many :active_followings, class_name: 'Following', foreign_key: :follower_id, dependent: :destroy
@@ -9,6 +11,8 @@ class User < ApplicationRecord
 
   has_many :passive_followings, class_name: 'Following', foreign_key: :followed_id, dependent: :destroy
   has_many :followers, through: :passive_followings, source: :follower
+
+  scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 
   def follow(other_user)
     active_followings.create(followed_id: other_user.id)
