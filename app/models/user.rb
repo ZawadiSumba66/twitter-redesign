@@ -25,4 +25,10 @@ class User < ApplicationRecord
   def following?(other_user)
     followings.include?(other_user)
   end
+
+  def followings_posts
+    followings_ids = followings.map(&:id)
+    followings_ids << id
+    Tweet.all.ordered_by_most_recent.where(author_id: followings_ids)
+  end
 end

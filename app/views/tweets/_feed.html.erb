@@ -1,4 +1,4 @@
-<% @tweets.includes(:author, :likes).each do |tweet|%>
+<% @tweets.each do |tweet|%>
        <div class="d-flex justify-content-between pr-3">
         <p><%= tweet.author.fullname unless tweet.author.blank?%><%= '@' + tweet.author.username unless tweet.author.blank?%></p>
          <p><%= tweet.created_at.strftime("%Y/%m/%d")%></p>
