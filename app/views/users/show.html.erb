@@ -20,7 +20,7 @@
      <%end%>
     </div>
 	</div>
-	<div class="col-4 text-center">
+	<div class="col-4 profile-users text-center">
             <p class="panel-heading">Profile</p>
                         <%= avatar_for(@user)%>
                         <p class="names">
@@ -34,7 +34,7 @@
                          <p class="tweets"><%=@user.authored_tweets.count%></p>
                     </div>
                     <div class="px-3">
-                        <p class="heading">Following</p>
+                        <p class="heading">Followings</p>
                         <p class="title is-6"><%=@user.followings.count%></p>
                     </div>
                     <div class="level-item">

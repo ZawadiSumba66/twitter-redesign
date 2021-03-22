@@ -1,6 +1,23 @@
 <div class="left text-secondary text-center px-2 pt-3">
-		 <p class="text-light text-sm logo">Africa Facts Zone</p>
-		  <strong class="text-gray pr-3"><%= link_to 'Homepage', root_path, class: "text-light"%></strong><br />
+      <div class="d-flex">
+       <div class="profile-users">
+          <%= avatar_for(current_user)%>
+		</div>
+		<div class="profile-name pt-4 pl-3">
+		  <%=current_user.fullname%>
+		</div>
+		</div>
+		<div class="d-flex pt-4">
+		 <div class="px-3">
+		                <p class="tweets text-light font-weight-bold"><%=current_user.followers.count%></p>
+                        <p class="heading">Followers</p>
+                    </div>
+                    <div class="px-3">
+					  <p class="title is-6 text-light font-weight-bold"><%=current_user.followings.count%></p>
+                        <p class="heading">Followings</p>
+                    </div>
+					</div>
+		  <strong class="pr-3"><i class="fas fa-home"></i><%= link_to 'Homepage', root_path, class: "text-secondary"%></strong><br />
 		  <br>
-	      <strong class="text-gray pr-3"><%= link_to 'Profile', current_user, class: "text-light"%></strong><br />
+	      <strong class="pr-3"><i class="fas fa-user"></i><%= link_to 'Profile', current_user, class: "text-secondary"%></strong><br />
 </div>
