@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = User.find(session[:id]).followings_posts
+    @tweets = Tweet.all.ordered_by_most_recent
     @users = User.all.ordered_by_most_recent
     @tweet = Tweet.new
   end
