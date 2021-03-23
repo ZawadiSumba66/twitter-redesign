@@ -8,7 +8,7 @@ RSpec.feature 'Users' do
     visit '/users/sign_in'
     fill_in 'username', with: 'chris5'
     click_on 'Submit'
-    expect(page).to have_content 'Africa Facts Zone'
+    expect(page).to have_content 'AfricaFactsZone'
   end
   scenario 'when a user logs out' do
     visit '/users/sign_in'

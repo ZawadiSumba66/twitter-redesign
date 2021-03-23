@@ -50,6 +50,7 @@ The number of tweets one makes is also displayed in the user profile.
 ### Creating a tweet
 
 - A signed in user can create a tweet and save it
+- A user can also like a tweet
 
 ### Followings
 
