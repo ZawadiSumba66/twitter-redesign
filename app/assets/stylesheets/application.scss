@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+.left {
+  background-color: #213346;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+}
+
+.top_nav {
+  background-color: #50a1e0;
+  height: 10vh;
+}
+
+.logo {
+  font-family: 'Redressed', cursive;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+img {
+  height: 30vh;
+}
+
+.welcome img {
+  height: 50vh;
+}
+
+.profile-users img {
+  width: 70px;
+  height: 70px;
+}
+
+.profile-follow img {
+  width: 40px;
+  height: 40px;
+}
+
+.follow,
+.profile {
+  background-color: #f5f6f8;
+}

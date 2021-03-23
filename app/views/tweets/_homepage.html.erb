@@ -1,0 +1,21 @@
+<div class="d-flex row no-gutters">
+<div class="col-2">
+<%=render 'left_nav'%>
+</div>
+<div class="lower_side col-10">
+    <%= render'top_nav'%>
+   <div class="d-flex">
+   <div class="col-8">
+	<div class="tweet-form bg-white rounded-md shadow px-5 py-2">
+	   <%=render 'tweet_form'%>
+    </div>
+	<div class="tweet_feed text-dark bg-white rounded-md shadow mt-5 pl-4">
+	   <%=render 'feed'%>
+	</div>
+	</div>
+	<div class="follow w-50 mx-auto  col-4  rounded-md shadow pl-4 ">
+	   <%=render 'who_to_follow'%>
+    </div>
+	</div>
+</div>
+</div>
