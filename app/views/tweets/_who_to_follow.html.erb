@@ -3,7 +3,7 @@
             <% unless current_user==user%>
                <div class="d-flex justify-content-center">
                <div class="profile-follow">
-                <%= avatar_for(user)%>
+                 <img src="<%=user.photo%>" class="rounded-circle"/>
                 </div>
                <div class="col-6">
                  <strong><%=link_to user.username, user_path(user)%></strong>
