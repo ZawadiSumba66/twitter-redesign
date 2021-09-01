@@ -1,0 +1,12 @@
+development:
+  cloud_name: db69dlggn
+  api_key: '876938127358744'
+  api_secret: Mr29HDxzyQTARVbl0QT6sf03rOM
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: db69dlggn
+  api_key: '876938127358744'
+  api_secret: Mr29HDxzyQTARVbl0QT6sf03rOM
+  enhance_image_tag: true
+  static_file_support: true
