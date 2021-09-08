@@ -1,7 +1,7 @@
 <div class="left text-secondary  px-2 pt-3">
       <div class="d-flex text-center">
        <div class="profile-users">
-          <%= avatar_for(current_user)%>
+         <img src="<%=current_user.photo%>" class="rounded-circle"/>
 		</div>
 		<div class="profile-name pt-4 pl-3">
 		  <%=current_user.fullname%>

@@ -1,5 +1,5 @@
 <div class="top_nav d-flex justify-content-between">
-   <p class="logo pt-2 pl-3 text-light">AfricaFactsZone</p>
+    <p class="pt-2"><%= link_to link_to 'AfricaFactsZone', root_path, class: "logo pl-3 text-light" %></p>
    <p class="names d-flex justify-content-end pt-4">
 	  <strong ><%= link_to current_user.fullname, current_user, class: "text-light pr-3" %></strong><br />
 	  <strong ><%= link_to 'Log out', users_log_out_path, class: "text-light pr-4", method: :delete %></strong>

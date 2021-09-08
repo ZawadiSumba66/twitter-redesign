@@ -1,7 +1,7 @@
 <% @tweets.includes(:author, :likes).each do |tweet|%>
        <div class="d-flex justify-content-between pr-3">
         <p><%= tweet.author.fullname unless tweet.author.blank?%><%= '@' + tweet.author.username unless tweet.author.blank?%></p>
-         <p><%= tweet.created_at.strftime("%Y/%m/%d")%></p>
+         <p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y %l:%M%P")%></p>
        </div>
         <p><%= tweet.text%></p>
         <%=like_btn(tweet)%>

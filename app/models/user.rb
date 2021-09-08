@@ -14,6 +14,9 @@ class User < ApplicationRecord
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 
+  mount_uploader :photo, PhotoUploader
+  mount_uploader :cover_image, CoverImageUploader
+
   def follow(other_user)
     active_followings.create(followed_id: other_user.id)
   end

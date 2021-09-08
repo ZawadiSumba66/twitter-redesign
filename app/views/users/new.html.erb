@@ -11,6 +11,14 @@
     <br>
      <%= form.text_field :fullname, placeholder: "Enter your Fullname", class: 'form-control'%>
     <br />
+     <%= form.label :photo, "Choose your profile image"%>
+     <br />
+     <%= form.file_field :photo, label: "Enter your Fullname"%>
+     <br />
+     <br />
+      <%= form.label :cover_image, "Choose your cover image"%>
+       <br />
+     <%= form.file_field :cover_image%>
     <br/>
     <%= form.submit "Submit", class: "btn-primary  btn"%>
 <% end %>
