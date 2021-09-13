@@ -15,7 +15,9 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = User.find(session[:id]).authored_tweets.build(tweet_params)
-    redirect_to root_path if @tweet.save
+    if @tweet.save
+      redirect_to root_path, notice: 'Tweet successfully created'
+    end
   end
 
   private

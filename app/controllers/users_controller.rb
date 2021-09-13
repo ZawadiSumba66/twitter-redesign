@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       session[:username] = @user.username
       redirect_to root_path, notice: 'You have successfully signed in'
     else
-      render :log_in, alert: 'User does not exist'
+      render :log_in, alert: "Username does not exist"
     end
   end
 

@@ -19,6 +19,11 @@
   </head>
 
   <body>
+    <%if flash[:notice]%>
+      <div class = "alert-success alert_wrapper"><%= flash[:notice] %></div>
+    <%elsif flash.now[:alert]%>
+      <div class = "alert-error alert_wrapper"><%= flash[:alert] %></div>
+    <%end%>
     <%= yield %>
   </body>
 </html>
