@@ -11,12 +11,16 @@
       </div>
 	<div class="personal_tweets bg-white rounded-md shadow mx-3 pl-5 mt-3">
      <%@personal_tweets.each do |personal|%>
+
      <div class="d-flex justify-content-between pr-4">
        <p><%= personal.text%></p>
-       <p><%= personal.created_at.strftime("%Y/%m/%d")%></p>
-       </div>
+       <p><%= personal.created_at.strftime("#{personal.created_at.day.ordinalize} %B %Y %l:%M%P") %></p>
+       </div><br>
+        <%= link_to 'edit', edit_tweet_path(personal) %> |
+        <%= link_to "delete", tweet_path(personal),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
         <hr>
-	   <br>
      <%end%>
     </div>
 	</div>
