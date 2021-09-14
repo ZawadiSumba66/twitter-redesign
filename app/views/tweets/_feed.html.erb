@@ -4,7 +4,11 @@
          <p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y %l:%M%P")%></p>
        </div>
         <p><%= tweet.text%></p>
-        <%=like_btn(tweet)%>
-        <%=tweet.likes.count%>
+      <div class>
+        <div>
+          <%=like_btn(tweet)%>
+          <%=tweet.likes.count%>
+        </div>
+      </div>
         <hr class="my-4">
 <%end%>

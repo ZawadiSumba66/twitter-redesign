@@ -1,0 +1,6 @@
+<div class="fill_form mt-4">
+<div class="tweet_header text-dark d-flex">
+   <%=link_to 'Update your tweet', edit_tweet_path, class: "text-dark pr-3 pb-3 text-decoration-none border-bottom-2" %>
+</div>
+<%=render 'form', tweet: @tweet%>
+</div>

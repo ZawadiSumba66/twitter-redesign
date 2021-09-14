@@ -55,3 +55,19 @@ img {
 .profile {
   background-color: #f5f6f8;
 }
+
+.alert-error {
+  background: lightcoral;
+}
+
+.alert-success {
+  background: lightgreen;
+}
+
+.alert_wrapper {
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 20px;
+}

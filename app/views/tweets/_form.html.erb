@@ -1,0 +1,10 @@
+<%= form_for(@tweet) do |f| %>
+    <ul>
+       <% @tweet.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+       <% end %>
+    </ul>
+    <%= f.text_area :text, class: "form-control h-50 border-rounded", placeholder: "Let's Tweet Africa"%>
+    <br>
+    <%= f.button :Tweet,  class: "btn btn-primary d-flex justify-content-end" %>
+<% end %>
