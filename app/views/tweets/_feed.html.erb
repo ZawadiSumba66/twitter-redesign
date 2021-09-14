@@ -1,7 +1,8 @@
 <% @tweets.includes(:author, :likes).each do |tweet|%>
-       <div class="d-flex justify-content-between pr-3">
+       <div class="d-flex justify-content-between pr-3 profile-follow">
+        <img src="<%=tweet.author.photo unless tweet.author.blank?%>" class="rounded-circle"/>
         <p><%= tweet.author.fullname unless tweet.author.blank?%><%= '@' + tweet.author.username unless tweet.author.blank?%></p>
-         <p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y %l:%M%P")%></p>
+        <p><%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %B %Y %l:%M%P")%></p>
        </div>
         <p><%= tweet.text%></p>
       <div class>
