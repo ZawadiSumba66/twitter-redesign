@@ -9,9 +9,13 @@
 	<div class="top_image mr-3">
       <img src="<%=@user.cover_image%>" class="w-100"/>
       </div>
-	<div class="personal_tweets bg-white rounded-md shadow mx-3 pl-5 mt-3">
+	<div class="personal_tweets bg-white rounded-md shadow mx-3 pl-5 pb-3 mt-3">
+     <%if @personal_tweets.blank?%>
+        <h5 class="text-center font-weight-bold">No Tweets available ___</h5>
+        <p><%= link_to 'Tweet now', root_path, class: 'px-4 py-1 bg-primary text-light rounded-pill text-red-500 border
+          border-red-500 rounded-full'%></p>
+     <%else%>
      <%@personal_tweets.each do |personal|%>
-
      <div class="d-flex justify-content-between pr-4">
        <p><%= personal.text%></p>
        <p><%= personal.created_at.strftime("#{personal.created_at.day.ordinalize} %B %Y %l:%M%P") %></p>
@@ -21,6 +25,7 @@
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
         <hr>
+     <%end%>
      <%end%>
     </div>
 	</div>
