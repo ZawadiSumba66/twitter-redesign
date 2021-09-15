@@ -35,6 +35,8 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'simple_form', '~> 5.1'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
